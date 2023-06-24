@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Here is Simple Articles Generator, You Can Customize Your Text, Color, Size, Font, And Alot! I Hope You Like It"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Javascript Simple Tools & Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans&family=Poppins&family=Raleway&family=Roboto&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- start Header -->
+    <header>
+      <div class="container">
+        <ul>
+          <li>
+            <a href="#article"
+              >Article Editor Tool
+              <i class="fa-solid fa-newspaper fa-bounce"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#game"
+              >Generated Number Game <i class="fa-solid fa-dice fa-bounce"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#calc"
+              >Calculator <i class="fa-solid fa-calculator fa-bounce"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#ageGenerator"
+              >What Is My Age<i class="fa-solid fa-question fa-bounce"></i
+            ></a>
+          </li>
+          <div class="clock">
+            <span class="hours">00</span>
+            <span>:</span>
+            <span class="mins">00</span>
+            <span>:</span>
+            <span class="seconds">00</span>
+            <div class="mode">AM</div>
+          </div>
+        </ul>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Starting Article Editor Tool -->
+    <h2 id="article" class="title">Article Editor Tool</h2>
+    <div class="parent">
+      <div class="tools">
+        <input type="text" placeholder="Enter Your Text" class="inpText" />
+        <select id="font">
+          <option value="Choose Font--">Choose Font--</option>
+          <option value="Cairo">Cairo</option>
+          <option value="Roboto">Roboto</option>
+          <option value="sans-serif">sans-serif</option>
+          <option value="Monospace">Monospace</option>
+          <option value="Open Sans">Open Sans</option>
+          <option value="Poppins">Poppins</option>
+          <option value="Raleway">Raleway</option>
+          <option value="Roboto Mono">Roboto Mono</option>
+        </select>
+        <div class="parent-calc">
+          <button class="bold"><i class="fa-solid fa-b"></i></button>
+          <button class="minus">
+            <i class="fa-sharp fa-solid fa-minus"></i>
+          </button>
+          <div class="Fontresults"></div>
+          <button class="add"><i class="fa-sharp fa-solid fa-plus"></i></button>
+        </div>
+        <input type="color" class="colorInp" />
+        <button class="invert">Invert Colors</button>
+        <button class="refresh">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </button>
+      </div>
+      <p class="text"></p>
+    </div>
+    <!-- Ending Article Editor Tool -->
+    <!-- Starting Generated Number Game -->
+    <h3 id="game" class="title">Generated Numbers Game</h3>
+    <form action="">
+      <input
+        class="numInput"
+        type="number"
+        placeholder="Enter Number From 1 To 80"
+      />
+      <div class="results"></div>
+      <input class="sub" type="submit" />
+      <h3>Score</h3>
+      <div class="versus">
+        <span class="computer"><i class="fa-solid fa-computer"></i></span>
+        <span class="user"><i class="fa-solid fa-user"></i></span>
+      </div>
+    </form>
+    <!-- Ending Generated Number Game -->
+    <!-- starting Calculator -->
+    <h2 id="calc" class="title">Calculator</h2>
+    <section>
+      <div class="container">
+        <div class="display"></div>
+        <div class="buttons">
+          <div class="button">C</div>
+          <div class="button">/</div>
+          <div class="button">*</div>
+          <div class="button">&larr;</div>
+          <div class="button">7</div>
+          <div class="button">8</div>
+          <div class="button">9</div>
+          <div class="button">-</div>
+          <div class="button">4</div>
+          <div class="button">5</div>
+          <div class="button">6</div>
+          <div class="button">+</div>
+          <div class="button">1</div>
+          <div class="button">2</div>
+          <div class="button">3</div>
+          <div class="button">.</div>
+          <div class="button">(</div>
+          <div class="button">0</div>
+          <div class="button">)</div>
+          <div id="special" class="button">=</div>
+        </div>
+      </div>
+    </section>
+    <!-- ending Calculator -->
+    <!-- Scroll To Top -->
+    <button class="scroll">
+      <i class="fa-sharp fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- What Is My Age Generator -->
+    <h2 id="ageGenerator" class="title">Age Generator</h2>
+    <section id="AgeGeneratorSection">
+      <div>
+        <input
+          type="text"
+          placeholder="Enter Your Date Of Birth (Month, Day, Year)"
+        />
+        <select id="UnitsOfAge">
+          <option value="Years">Years</option>
+          <option value="Months">Months</option>
+          <option value="Days">Days</option>
+          <option value="Hours">Hours</option>
+          <option value="Minutes">Minutes</option>
+          <option value="Seconds">Seconds</option>
+        </select>
+        <input type="submit" />
+      </div>
+      <div class="theParent">
+        <div class="theResults"></div>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

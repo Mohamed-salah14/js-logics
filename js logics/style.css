@@ -1,0 +1,433 @@
+:root {
+    --main-color--: #ebebeb;
+    --secondary-color--: #3cadfd;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 16px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color--);
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--main-color--);
+}
+/* header */
+header {
+    background-color: var(--main-color--);
+    font-family: "Cairo";
+}
+header .container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+header .container ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+@media (max-width:767px) {
+    header .container ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+header .container ul li {
+    margin: 0 50px;
+    padding: 6px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: white;
+}
+@media (max-width:767px) {
+    header .container ul li {
+        margin: 12px 0;
+    }
+}
+header .container ul  li a {
+    text-decoration: none;
+    color: black;
+    transition: 0.4s;
+}
+header .container ul  li a:hover {
+    padding: 10px;
+}
+header .container ul  li a i {
+    font-size: 15px;
+    margin: 0 3px;
+    transition: 0.3s;
+}
+header .container ul  li a:hover i {
+    color: #777;
+}
+header .container .lang {
+    padding: 4px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+header .container .lang:hover {
+    border-radius: 50%;
+    transform: scale(1.1);
+    color: var(--secondary-color--);
+}
+header .container .clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    cursor: pointer;
+}
+header .container  span {
+    padding: 0.5px;
+    font-size: 17px;
+}
+header .container .mode {
+    margin-left: 1px;
+}
+/* Starting Article Editor Tools */
+.title {
+    text-align: center;
+    font-family: "Cairo";
+    letter-spacing: 1px;
+    border-bottom: 1px solid #525252;
+    width: fit-content;
+    margin: 12px auto;
+    margin-bottom: 26px;
+}
+.parent {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color--);
+    padding: 14px;
+    margin: 12px;
+}
+
+.parent .tools {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+@media (max-width:767px) {
+    .parent .tools {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+     }
+     .parent .tools .parent-calc {
+        display: flex;
+        justify-content: center;
+        margin: 14px;
+     }
+     .parent .inpText {
+    margin-bottom: 4px;
+     }
+}
+
+@media (min-width:767px) {
+     .parent .tools .parent-calc {
+        display: inherit;
+     }
+}
+.parent .tools .inpText {
+    padding: 6px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding-left: 12px;
+    transition: 0.6s;   
+}
+.parent .tools .inpText:focus {
+    transform: scaleX(0.9);
+}
+.parent .colorInp {
+    background-color: white;
+    border: none;
+    padding: 4px 9px;
+    width: 40px;
+    border-radius: 2px;
+}
+.parent input:focus {
+    outline: none;
+
+}
+.parent input:focus::placeholder {
+    opacity: 0;
+}
+.parent select {
+    margin: 0 6px;
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 5px 2px;
+}
+.parent select:focus {
+    outline: 1px solid var(--main-color--);
+}
+.parent button {
+    margin: 0 6px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.parent button i {
+    font-size: 13px;
+}
+
+.parent .Fontresults {
+    background-color: white;
+    width: 33.26px;
+    height: 27.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+
+.parent .text {
+    background-color: white;
+    padding: 12px;
+    text-transform: capitalize;
+}
+/* Ending Article Editor Tools */
+/* Starting Generated Number Game */
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Cairo";
+    background-color: var(--main-color--);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+ h3{
+    letter-spacing: 1px;
+    font-size: 20px;
+    border-bottom: 1px solid #525252;
+}
+
+.results {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    margin: 15px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+}
+
+input {
+    padding: 7px 10px;
+    margin: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--main-color--);
+    transition: 0.4s;
+}
+input[type = "number"] {
+    width: 190px;
+}
+input[type = "submit"] {
+    background-color: white;
+    width: 80px;
+    border: 2px solid var(--main-color--);
+}
+input[type = "number"]:focus {
+    outline: none;
+    width: 170px;
+}
+input[type = "number"]::placeholder {
+    font-size: 12px;
+    text-align: center;
+    color: #777;
+}
+h3 {
+    margin-bottom: 4px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #525252;
+
+}
+.versus {
+    display: flex;
+    align-items: center;
+}
+.versus span {
+    display: flex;
+    width: 80px;
+    height: 45px;
+    margin: 20px 50px;
+    border-radius: 6px;
+    justify-content: center;
+    padding: 5px;
+    color: #eee;
+
+}
+.versus span i {
+    margin-top: 3px;
+    color: #eee;
+}
+
+.versus span:first-child {
+    background-color: var(--secondary-color--);
+}
+
+.versus span:last-child {
+    background-color: orangered;
+}
+
+
+/* Ending Generated Number Game */
+/* start calculator */
+section .container {
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 2px 6px 40px -2px rgb(193 193 193);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Cairo";
+    margin-bottom: 40px;
+}
+.display {
+    height: 70px;
+    line-height: 70px;
+    font-size: 25px;
+    padding: 20px 8px;
+    text-align: right;
+    border: 1px solid #e0e0e0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+section .container .buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+}
+section .container .buttons  .button {
+    border: 1px solid var(--main-color--);
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.4s;
+}
+section .container .buttons  .button:hover {
+    background-color: #f0f0f0;
+}
+section .container #special {
+    background-color: var(--secondary-color--);
+    color: white;
+    border: none;
+}
+/* end calculator */
+/* Scroll To Top */
+.scroll {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 15px 30px 5px 15px;
+    padding: 8px 14px;
+    background-color: var(--secondary-color--);
+    color: white;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* What Is My Age Generator */
+#AgeGeneratorSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#AgeGeneratorSection .theParent {
+    width: 550px;
+    height: 250px;
+    background-color: var(--main-color--);
+    margin: 30px;
+    border-radius: 35px;
+    display: flex;
+    font-family: "Cairo";
+    color: #3a3a3a;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+@media (max-width:767px) {
+    #AgeGeneratorSection .theParent {
+        width: 400px;
+        height: 200px;
+    }
+}
+#AgeGeneratorSection input[type = "text"] {
+    width: 265px;
+    height: 24px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    transition: 1s;
+}
+@media (max-width:767px) {
+    #AgeGeneratorSection input[type = "text"] {
+        width: 200px;
+        height: 24px;
+    }
+    #AgeGeneratorSection > div {
+        text-align: center;
+        margin-right: 15px;
+    }
+}
+#AgeGeneratorSection input[type = "text"]:focus {
+    outline: none;
+    width: 180px;
+}
+#AgeGeneratorSection input[type = "text"]:focus::placeholder {
+    opacity: 0;
+}
+#AgeGeneratorSection input[type = "submit"] {
+    background-color: var(--secondary-color--);
+    color: #eee;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    width: 90px;
+}
+#AgeGeneratorSection input[type = "submit"]:hover {
+    width: 100px;
+}
+#AgeGeneratorSection .theResults {
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#AgeGeneratorSection select {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid var(--main-color--);
+    text-align: center;
+    padding: 6px;
+}
+#AgeGeneratorSection select:focus {
+    outline: none;
+}
+#AgeGeneratorSection select option {
+    color: #343434;
+    background-color: #f3f3f3;
+}
+
